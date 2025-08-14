@@ -12,6 +12,7 @@
 2. 寄信範本在"mail_body.txt"，可自行修改
 3. 執行
 ```
+pip install pyptt
 python ptt.py
 ```
 若登入失敗稍等之後再執行，或者將 line 257的 kick_other_session=True改為False
@@ -90,3 +91,5 @@ Index    作者                 時間                        標題
 ```
 確認ok後會再確認一次郵件內容(由"mail_body.txt"而來)
 再輸入y即會每3秒寄一封信並留存 (PyPtt目前不支援群組寄信)
+
+影片：https://youtu.be/D0X-JzqCxas
