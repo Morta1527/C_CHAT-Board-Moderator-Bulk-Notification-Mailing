@@ -1,0 +1,25 @@
+{
+  "PTT_ID": "帳號", 
+  "PTT_PW": "密碼", 
+
+  "BOARD": "C_CHATBM",
+
+  "INDEX_RANGE": "文章編號範圍(1-10)",
+  "INDEX_LIST": [],
+
+  "PUSH_TEXT": "已寄信通知",
+  "COMMENT_TYPE": "PUSH",
+  
+  "MAIL_TITLE":    "[通告] C_Chat違規檢舉通知",
+  "MAIL_BODY_FILE":"mail_body.txt",
+
+  "ALLOW_DUPLICATE": true,         
+  "SKIP_IF_SAME_EXISTS": false,    
+
+  "SLEEP_SECONDS_MIN": 6,          
+  "SLEEP_SECONDS_MAX": 12,
+
+  "RETRY_ON_FAST": true,           
+  "RETRY_MAX": 3,                  
+  "RETRY_BACKOFF_BASE": 8         
+}
