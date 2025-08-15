@@ -235,6 +235,7 @@ def main():
 
     ptt_id = cfg["PTT_ID"]
     ptt_pw = cfg["PTT_PW"]
+    login = cfg["LOGIN"]
     board  = cfg["BOARD"].strip()
     push_text = (cfg["PUSH_TEXT"] or "").strip()
     if not push_text:
@@ -265,7 +266,7 @@ def main():
 
     api = PyPtt.API()
     try:
-        api.login(ptt_id=ptt_id, ptt_pw=ptt_pw, kick_other_session=False)
+        api.login(ptt_id=ptt_id, ptt_pw=ptt_pw, kick_other_session=login)
         print(f"登入成功：{ptt_id}")
 
         targets = sorted(index_set)
@@ -428,4 +429,5 @@ def main():
             pass
 if __name__ == "__main__":
     main()
+
 
