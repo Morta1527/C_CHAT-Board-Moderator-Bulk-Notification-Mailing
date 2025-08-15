@@ -12,7 +12,7 @@
 2. 將config.json資料補齊
 3. 寄信範本在"mail_body.txt"，可自行修改
 4. 以系統管理員開啟C_CHAT mod.exe
-5. 若登入失敗稍等之後再執行，或者將 config.json的login改為true/false
+5. 若登入失敗稍等之後再執行，或者將 config.json的login改為true/false --第一個字母一定要小寫
 
 執行後會列出 config.json 裡 符合 BOARD、INDEX_RANGE的文章
 ```
