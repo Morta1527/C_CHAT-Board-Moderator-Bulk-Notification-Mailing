@@ -106,13 +106,6 @@ def preview_targets(api: PyPtt.API, board: str, indices: List[int]) -> List[Dict
     print("-" * 120)
     return rows
 
-def confirm_to_proceed() -> str:
-    ans = input("以上為將要推文的文章清單，是否繼續執行推文？(y=推文 / n=取消 / s=匯出被檢舉ID)：").strip().lower()
-    if ans in ("y", "n", "s"):
-        return ans
-    return "n"
-
-
 def do_comment(api: PyPtt.API, board: str, index: int, content: str,
                ctype: PyPtt.CommentType, skip_if_same: bool,
                retry_on_fast: bool, retry_max: int, backoff_base: int):
@@ -272,7 +265,7 @@ def main():
 
     api = PyPtt.API()
     try:
-        api.login(ptt_id=ptt_id, ptt_pw=ptt_pw, kick_other_session=True)
+        api.login(ptt_id=ptt_id, ptt_pw=ptt_pw, kick_other_session=False)
         print(f"登入成功：{ptt_id}")
 
         targets = sorted(index_set)
@@ -356,7 +349,7 @@ def main():
 
                 # 開始逐篇推文
                 for r in report_rows:
-                    idx = row["index"]
+                    idx = r["index"]
                     try:
                         do_comment(api, board, idx, push_text, ctype,
                                 skip_if_same, retry_on_fast, retry_max, backoff_base)
