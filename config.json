@@ -1,7 +1,7 @@
 {
   "PTT_ID": "帳號", 
   "PTT_PW": "密碼",
-  "LOGIN": True,
+  "LOGIN": true,
 
   "BOARD": "C_CHATBM",
 
@@ -24,5 +24,6 @@
   "RETRY_MAX": 3,                  
   "RETRY_BACKOFF_BASE": 8         
 }
+
 
 
