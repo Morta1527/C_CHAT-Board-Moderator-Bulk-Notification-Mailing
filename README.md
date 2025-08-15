@@ -7,17 +7,14 @@
 # 環境
 使用python環境 3.10.18; win11
 
-# 使用流程
-1. 將config.json資料補齊
-2. 寄信範本在"mail_body.txt"，可自行修改
-3. 執行
-```
-pip install pyptt
-python ptt.py
-```
-若登入失敗稍等之後再執行，或者將 line 257的 kick_other_session=True改為False
+# 使用流程1
+1. 右上角Code>Downlod ZIP
+2. 將config.json資料補齊
+3. 寄信範本在"mail_body.txt"，可自行修改
+4. 以系統管理員開啟C_CHAT mod.exe
+5. 若登入失敗稍等之後再執行，或者將 config.json的login改為true/false
 
-4.執行後會列出 config.json 裡 符合 BOARD、INDEX_RANGE的文章
+執行後會列出 config.json 裡 符合 BOARD、INDEX_RANGE的文章
 ```
 看板：C_ChatBM，共 16 筆
 Index    作者               時間                       標題
@@ -93,3 +90,15 @@ Index    作者                 時間                        標題
 再輸入y即會每3秒寄一封信並留存 (PyPtt目前不支援群組寄信)
 
 影片：https://youtu.be/D0X-JzqCxas
+
+# 使用流程2
+1. 將config.json資料補齊
+2. 寄信範本在"mail_body.txt"，可自行修改
+3. 執行
+```
+pip install pyptt
+python ptt.py
+```
+之後同上
+
+
